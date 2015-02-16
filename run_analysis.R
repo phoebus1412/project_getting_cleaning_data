@@ -1,4 +1,3 @@
-## R script for Getting and Cleaning Data Course Project 
 ## read training set and test set
 setwd("Z:\\R\\CourseraExercises\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\train")
 trainSet<-read.table("X_train.txt")
@@ -14,12 +13,7 @@ setwd("Z:\\R\\CourseraExercises\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR D
 activityLabel<-read.table("activity_labels.txt")
 features<-read.table("features.txt")
 
-## In order to make merged data set available for future uses,
-## Here,before I merge data, I did point 3 first, that is, Adding a new column 
-## called Activities into training and test sets, which labels each observation 
-## with its moving pattern, besides, in order to finish point 5, I also add a column 
-## called Subject which denotes who did this observation.Then, use merge() to combine 
-## two data sets.    
+##merging training set and test set& label the activity
 trainWordLabel<-c()
 for(i in 1:nrow(trainLabel)){
     trainWordLabel<-c(trainWordLabel,as.character(activityLabel[trainLabel[i,1],2]))
@@ -32,12 +26,7 @@ for(i in 1:nrow(testLabel)){
 testSet<-data.frame(testSet,Activities=testWordLabel,Subject=as.vector(testSubject))
 mergeSet<-merge(trainSet,testSet,all=TRUE)
 
-## Extracts measurements on the mean and standard deviation for each measurement. 
-## In order to select measurements related to mean and std,
-## I use grepl() which is a pattern matching function, it will return a logical 
-## value to decide whether the parameter pattern is in the parameter x or not.
-## By using this function,I can select all the variables related to mean and 
-## standrad deviation.Then extract them.
+##Extracts measurements on the mean and standard deviation for each measurement. 
 meanIndex<-c()
 for(j in 1:nrow(features)){
     if(grepl(pattern="mean",x=as.character(features[j,2]))){
@@ -52,12 +41,11 @@ for(k in 1:nrow(features)){
 }
 measureMeanStd<-mergeSet[,c(meanIndex,stdIndex)]
 
-## labels the data set with descriptive variable names
-## Here, I use colnames() to denote variable names.
+##labels the data set with descriptive variable names
 colnames(mergeSet)<-c(as.character(features[,2]),"Activities","Subject")
 
-## creates a second, independent tidy data set with the average 
-## of each variable for each activity and each subject.
+##creates a second, independent tidy data set with the average 
+##of each variable for each activity and each subject.
 secondSet<-data.frame(matrix(0,ncol=561,nrow=36))
 for(m in 1:nrow(activityLabel)){
     for(n in 1:nrow(features)){
@@ -69,9 +57,6 @@ for(p in 1:30){
         secondSet[p+6,q]<-mean(mergeSet[as.character(mergeSet$Subject)==p,as.character(features[q,2])])
     }
 }
-
-## Finally, write the second independent tidy data set into working directory
 rownames(secondSet)<-c(as.character(activityLabel[,2]),1:30)
 colnames(secondSet)<-as.character(features[,2])
 write.table(secondSet,file="Second Data Set.txt",row.names=FALSE)
-
