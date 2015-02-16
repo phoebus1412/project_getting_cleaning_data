@@ -1,4 +1,7 @@
-                          Code Book - Human Activity Recognition Using Smartphones Dataset
+Code Book - Human Activity Recognition Using
+----------------------------------------
+
+*Smartphones Dataset*
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -9,262 +12,738 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+ - tBodyAcc-XYZ tGravityAcc-XYZ
+ - tBodyAccJerk-XYZ tBodyGyro-XYZ
+ - tBodyGyroJerk-XYZ tBodyAccMag
+ - tGravityAccMag tBodyAccJerkMag
+ - tBodyGyroMag tBodyGyroJerkMag
+ - fBodyAcc-XYZ fBodyAccJerk-XYZ
+ - fBodyGyro-XYZ fBodyAccMag
+ - fBodyAccJerkMag fBodyGyroMag
+ - fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+ - mean(): Mean value 
+ - std(): Standard deviation 
+ - mad(): Median absolute deviation  
+ - max(): Largest value in array 
+ - min(): Smallest value in array
+ - sma(): Signal magnitude area
+ - energy(): Energy measure. Sum of the squares divided by the number of values.  
+ - iqr(): Interquartile range 
+ - entropy(): Signal entropy 
+ - arCoeff(): Autorregresion coefficients with Burg order equal to 4 
+ - correlation(): correlation coefficient between two signals 
+ - maxInds(): index of the frequency component with largest magnitude 
+ - meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+ - skewness(): skewness of the frequency domain signal  
+ - kurtosis(): kurtosis of the frequency domain signal 
+ - bandsEnergy(): Energy of a frequency interval within the 64 bins of the
+   FFT of each window. 
+ - angle(): Angle between to vectors.
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+ - gravityMean 
+ - tBodyAccMean
+ - tBodyAccJerkMean
+ - tBodyGyroMean
+ - tBodyGyroJerkMean
 
 Some of the sample translations are as follows:
 
 tBodyAcc-mean()-X 
-	Mean value of Body Acceleration along with X-axis based on time
+
+- Mean value of Body Acceleration along
+   with X-axis based on time
+
 tBodyAcc-mean()-Y
-	Mean value of Body Acceleration along with Y-axis based on time
+	
+
+ - Mean value of Body Acceleration along
+   with Y-axis based on time
+
 tBodyAcc-mean()-Z
-	Mean value of Body Acceleration along with Z-axis based on time
+	
+
+ - Mean value of Body Acceleration along
+   with Z-axis based on time
+
 tBodyAcc-std()-X
-	Standard deviation of Body Acceleration along with X-axis based on time
+	
+
+ - Standard deviation of Body
+   Acceleration along with X-axis based
+   on time
+
 tBodyAcc-std()-Y
-	Standard deviation of Body Acceleration along with Y-axis based on time
+	
+
+ - Standard deviation of Body
+   Acceleration along with Y-axis based
+   on time
+
 tBodyAcc-std()-Z
-	Standard deviation of Body Acceleration along with Z-axis based on time
+	
+
+ - Standard deviation of Body
+   Acceleration along with Z-axis based
+   on time
+
 tBodyAcc-mad()-X
-	Median absolute deviation of Body Acceleration along with X-axis based on time
+	
+
+ - Median absolute deviation of Body
+   Acceleration along with X-axis based
+   on time
+
 tBodyAcc-mad()-Y
-	Median absolute deviation of Body Acceleration along with Y-axis based on time
+	
+
+ - Median absolute deviation of Body
+   Acceleration along with Y-axis based
+   on time
+
 tBodyAcc-mad()-Z
-	Median absolute deviation of Body Acceleration along with Z-axis based on time
+	
+
+ - Median absolute deviation of Body
+   Acceleration along with Z-axis based
+   on time
+
 tBodyAcc-max()-X
-	Largest value of Body Acceleration along with X-axis based on time
+	
+
+ - Largest value of Body Acceleration
+   along with X-axis based on time
+
 tBodyAcc-max()-Y
-	Largest value of Body Acceleration along with Y-axis based on time
+	
+
+ - Largest value of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-max()-Z
-	Largest value of Body Acceleration along with Z-axis based on time
+	
+
+ - Largest value of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-min()-X
-	Smallest value of Body Acceleration along with X-axis based on time
+	
+
+ - Smallest value of Body Acceleration
+   along with X-axis based on time
+
 tBodyAcc-min()-Y
-	Smallest value of Body Acceleration along with Y-axis based on time
+	
+
+ - Smallest value of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-min()-Z
-	Smallest value of Body Acceleration along with Z-axis based on time
+	
+
+ - Smallest value of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-sma()
-	Signal magnitude area of Body Acceleration based on time
+	
+
+ - Signal magnitude area of Body
+   Acceleration based on time
+
 tBodyAcc-energy()-X
-	Energy Measure of Body Acceleration along with X-axis based on time
+	
+
+ - Energy Measure of Body Acceleration
+   along with X-axis based on time
+
 tBodyAcc-energy()-Y
-	Energy Measure of Body Acceleration along with Y-axis based on time
+	
+
+ - Energy Measure of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-energy()-Z
-	Energy Measure of Body Acceleration along with Z-axis based on time
+	
+
+ - Energy Measure of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-iqr()-X
-	Interquartile range of Body Acceleration along with X-axis based on time
+	
+
+ - Interquartile range of Body
+   Acceleration along with X-axis based
+   on time
+
 tBodyAcc-iqr()-Y
-	Interquartile range of Body Acceleration along with Y-axis based on time
+	
+
+ - Interquartile range of Body
+   Acceleration along with Y-axis based
+   on time
+
 tBodyAcc-iqr()-Z
-	Interquartile range of Body Acceleration along with Z-axis based on time
+	
+
+ - Interquartile range of Body
+   Acceleration along with Z-axis based
+   on time
+
 tBodyAcc-entropy()-X
-	Signal entropy of Body Acceleration along with X-axis based on time
+	
+
+ - Signal entropy of Body Acceleration
+   along with X-axis based on time
+
 tBodyAcc-entropy()-Y
-	Signal entropy of Body Acceleration along with Y-axis based on time
+	
+
+ - Signal entropy of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-entropy()-Z
-	Signal entropy of Body Acceleration along with Z-axis based on time
+	
+
+ - Signal entropy of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-arCoeff()-X,1
-	Autorregresion coefficients with Burg order equal to 1 of Body Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 1 of Body
+
+Acceleration along with X-axis based on time
 tBodyAcc-arCoeff()-X,2
-	Autorregresion coefficients with Burg order equal to 2 of Body Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 2 of Body
+
+ Acceleration along with X-axis based on time
 tBodyAcc-arCoeff()-X,3
-	Autorregresion coefficients with Burg order equal to 3 of Body Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 3 of Body
+
+Acceleration along with X-axis based on time
 tBodyAcc-arCoeff()-X,4
-	Autorregresion coefficients with Burg order equal to 4 of Body Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 4 of Body
+
+Acceleration along with X-axis based on time
 tBodyAcc-arCoeff()-Y,1
-	Autorregresion coefficients with Burg order equal to 1 of Body Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 1 of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-arCoeff()-Y,2
-	Autorregresion coefficients with Burg order equal to 2 of Body Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 2 of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-arCoeff()-Y,3
-	Autorregresion coefficients with Burg order equal to 3 of Body Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 3 of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-arCoeff()-Y,4
-	Autorregresion coefficients with Burg order equal to 4 of Body Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 4 of Body Acceleration
+   along with Y-axis based on time
+
 tBodyAcc-arCoeff()-Z,1
-	Autorregresion coefficients with Burg order equal to 1 of Body Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 1 of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-arCoeff()-Z,2
-	Autorregresion coefficients with Burg order equal to 2 of Body Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 2 of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-arCoeff()-Z,3
-	Autorregresion coefficients with Burg order equal to 3 of Body Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 3 of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-arCoeff()-Z,4
-	Autorregresion coefficients with Burg order equal to 4 of Body Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 4 of Body Acceleration
+   along with Z-axis based on time
+
 tBodyAcc-correlation()-X,Y
-	Correlation coefficient between X and Y
+	
+
+ - Correlation coefficient between X and
+   Y
+
 tBodyAcc-correlation()-X,Z
-	Correlation coefficient between X and Z
+	
+
+ - Correlation coefficient between X and
+   Z
+
 tBodyAcc-correlation()-Y,Z
-	Correlation coefficient between Y and Z
+	
+
+ - Correlation coefficient between Y and
+   Z
+
 tGravityAcc-mean()-X
-	Mean value of Gravity Acceleration along with X-axis based on time
+	
+
+ - Mean value of Gravity Acceleration
+   along with X-axis based on time
+
 tGravityAcc-mean()-Y
-	Mean value of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Mean value of Gravity Acceleration
+   along with Y-axis based on time
+
 tGravityAcc-mean()-Z
-	Mean value of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Mean value of Gravity Acceleration
+   along with Z-axis based on time
+
 tGravityAcc-std()-X
-	Standard deviation of Gravity Acceleration along with X-axis based on time
+	
+
+ - Standard deviation of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-std()-Y
-	Standrad deviation of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Standrad deviation of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-std()-Z
-	Standrad deviation of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Standrad deviation of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-mad()-X
-	Median absolute deviation of Gravity Acceleration along with X-axis based on time
+	
+
+ - Median absolute deviation of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-mad()-Y
-	Median absolute deviation of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Median absolute deviation of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-mad()-Z
-	Median absolute deviation of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Median absolute deviation of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-max()-X
-	Largest value of Gravity Acceleration along with X-axis based on time
+	
+
+ - Largest value of Gravity Acceleration
+   along with X-axis based on time
+
 tGravityAcc-max()-Y
-	Largest value of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Largest value of Gravity Acceleration
+   along with Y-axis based on time
+
 tGravityAcc-max()-Z
-	Largest value of Gravity Acceleration along withZ-axis based on time
+	
+
+ - Largest value of Gravity Acceleration
+   along withZ-axis based on time
+
 tGravityAcc-min()-X
-	Smallest value of Gravity Acceleration along with X-axis based on time
+	
+
+ - Smallest value of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-min()-Y
-	Smallest value of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Smallest value of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-min()-Z
-	Smallest value of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Smallest value of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-sma()
-	Signal magnitude area of Gravity Acceleration Signal
+	
+
+ - Signal magnitude area of Gravity
+   Acceleration Signal
+
 tGravityAcc-energy()-X
-	Energy measure of Gravity Acceleration along with X-axis based on time
+	
+
+ - Energy measure of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-energy()-Y
-	Energy measure of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Energy measure of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-energy()-Z
-	Energy measure of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Energy measure of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-iqr()-X
-	Interquantile range of Gravity Acceleration along with X-axis based on time
+	
+
+ - Interquantile range of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-iqr()-Y
-	Interquantile range of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Interquantile range of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-iqr()-Z
-	Interquantile range of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Interquantile range of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-entropy()-X
-	Signal entropy of Gravity Acceleration along with X-axis based on time
+	
+
+ - Signal entropy of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-entropy()-Y
-	Signal entropy of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Signal entropy of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-entropy()-Z
-	Signal entropy of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Signal entropy of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-arCoeff()-X,1
-	Autorregresion coefficients with Burg order equal to 1 of Gravity Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 1 of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-arCoeff()-X,2
-	Autorregresion coefficients with Burg order equal to 2 of Gravity Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 2 of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-arCoeff()-X,3
-	Autorregresion coefficients with Burg order equal to 3 of Gravity Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 3 of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-arCoeff()-X,4
-	Autorregresion coefficients with Burg order equal to 4 of Gravity Acceleration along with X-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 4 of Gravity
+   Acceleration along with X-axis based
+   on time
+
 tGravityAcc-arCoeff()-Y,1
-	Autorregresion coefficients with Burg order equal to 1 of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 1 of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-arCoeff()-Y,2
-	Autorregresion coefficients with Burg order equal to 2 of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 2 of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-arCoeff()-Y,3
-	Autorregresion coefficients with Burg order equal to 3 of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 3 of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-arCoeff()-Y,4
-	Autorregresion coefficients with Burg order equal to 4 of Gravity Acceleration along with Y-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 4 of Gravity
+   Acceleration along with Y-axis based
+   on time
+
 tGravityAcc-arCoeff()-Z,1
-	Autorregresion coefficients with Burg order equal to 1 of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 1 of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-arCoeff()-Z,2
-	Autorregresion coefficients with Burg order equal to 2 of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 2 of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-arCoeff()-Z,3
-	Autorregresion coefficients with Burg order equal to 3 of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 3 of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-arCoeff()-Z,4
-	Autorregresion coefficients with Burg order equal to 4 of Gravity Acceleration along with Z-axis based on time
+	
+
+ - Autorregresion coefficients with Burg
+   order equal to 4 of Gravity
+   Acceleration along with Z-axis based
+   on time
+
 tGravityAcc-correlation()-X,Y
-	Correlation efficient between X and Y
+	
+
+ - Correlation efficient between X and Y
+
 tGravityAcc-correlation()-X,Z
-	Correlation efficient between X and Z
+	
+
+ - Correlation efficient between X and Z
+
 tGravityAcc-correlation()-Y,Z
-	Correlation efficient between Y and Z
+	
+
+ - Correlation efficient between Y and Z
 
 fBodyAcc-maxInds-X
-	Index of the frequency component with largest magnitude of Body Acceleration along with X-axis
+	
+
+ - Index of the frequency component with
+   largest magnitude of Body
+   Acceleration along with X-axis
+
 fBodyAcc-maxInds-Y
-	Index of the frequency component with largest magnitude of Body Acceleration along with Y-axis
+	
+
+ - Index of the frequency component with
+   largest magnitude of Body
+   Acceleration along with Y-axis
+
 fBodyAcc-maxInds-Z
-	Index of the frequency component with largest magnitude of Body Acceleration along with Z-axis
+	
+
+ - Index of the frequency component with
+   largest magnitude of Body
+   Acceleration along with Z-axis
+
 fBodyAcc-meanFreq()-X
-	Weighted average of the frequency components to obtain a mean frequency of Body Acceleration along with X-axis
+	
+
+ - Weighted average of the frequency
+   components to obtain a mean frequency
+   of Body Acceleration along with
+   X-axis
+
 fBodyAcc-meanFreq()-Y
-	Weighted average of the frequency components to obtain a mean frequency of Body Acceleration along with Y-axis
+	
+
+ - Weighted average of the frequency
+   components to obtain a mean frequency
+   of Body Acceleration along with
+   Y-axis
+
 fBodyAcc-meanFreq()-Z
-	Weighted average of the frequency components to obtain a mean frequency of Body Acceleration along with Z-axis
+	
+
+ - Weighted average of the frequency
+   components to obtain a mean frequency
+   of Body Acceleration along with
+   Z-axis
+
 fBodyAcc-skewness()-X
-	Skewness of the frequency domain signal of Body Acceleration along with X-axis
+	
+
+ - Skewness of the frequency domain
+   signal of Body Acceleration along
+   with X-axis
+
 fBodyAcc-kurtosis()-X
-	kurtosis of the frequency domain signal of Body Acceleration along with X-axis
+	
+
+ - kurtosis of the frequency domain
+   signal of Body Acceleration along
+   with X-axis
+
 fBodyAcc-skewness()-Y
-	Skewness of the frequency domain signal of Body Acceleration along with Y-axis
+	
+
+ - Skewness of the frequency domain
+   signal of Body Acceleration along
+   with Y-axis
+
 fBodyAcc-kurtosis()-Y
-	kurtosis of the frequency domain signal of Body Acceleration along with Y-axis
+	
+
+ - kurtosis of the frequency domain
+   signal of Body Acceleration along
+   with Y-axis
+
 fBodyAcc-skewness()-Z
-	Skewness of the frequency domain signal of Body Acceleration along with Z-axis
+	
+
+ - Skewness of the frequency domain
+   signal of Body Acceleration along
+   with Z-axis
+
 fBodyAcc-kurtosis()-Z
-	kurtosis of the frequency domain signal of Body Acceleration along with Z-axis
+	
+
+ - kurtosis of the frequency domain
+   signal of Body Acceleration along
+   with Z-axis
+
 fBodyAcc-bandsEnergy()-1,8
-	Energy within frequency interval 1 to 8 of Body Acceleration
+	
+
+ - Energy within frequency interval 1 to
+   8 of Body Acceleration
+
 fBodyAcc-bandsEnergy()-9,16
-	Energy within frequency interval 9 to 16 of Body Acceleration
+	
+
+ - Energy within frequency interval 9 to
+   16 of Body Acceleration
+
 fBodyAcc-bandsEnergy()-17,24
-	Energy within frequency interval 17 to 24 of Body Acceleration
+	
+
+ - Energy within frequency interval 17
+   to 24 of Body Acceleration
 
 angle(tBodyAccMean,gravity)
-	Angle between Mean vector of Body Acceleration and Gravity
-angle(tBodyAccJerkMean),gravityMean)
-	Angle between Mean vector of Body Acceleration Jerk Signal and Mean vector of Gravity 
-angle(tBodyGyroMean,gravityMean)
-	Angle between Mean vector of Gyroscope Body Acceleration and Mean vector of Gravity
-angle(tBodyGyroJerkMean,gravityMean)
-	Angle between Mean vector of Gyroscope Body Acceleration Jerk Signal and Mean vector of Gravity
-angle(X,gravityMean)
-	Angle between Mean vector of Gravity and X-axis
-angle(Y,gravityMean)
-	Angle between Mean vector of Gravity and Y-axis
-angle(Z,gravityMean)
-	Angle between Mean vector of Gravity and Z-axis
+	
 
-A full list of variables are below:
+ - Angle between Mean vector of Body
+   Acceleration and Gravity
+
+angle(tBodyAccJerkMean),gravityMean)
+	
+
+ - Angle between Mean vector of Body
+   Acceleration Jerk Signal and Mean
+   vector of Gravity
+
+angle(tBodyGyroMean,gravityMean)
+	
+
+ - Angle between Mean vector of
+   Gyroscope Body Acceleration and Mean
+   vector of Gravity
+
+angle(tBodyGyroJerkMean,gravityMean)
+	
+
+ - Angle between Mean vector of
+   Gyroscope Body Acceleration Jerk
+   Signal and Mean vector of Gravity
+
+angle(X,gravityMean)
+	
+
+ - Angle between Mean vector of Gravity
+   and X-axis
+
+angle(Y,gravityMean)
+	
+
+ - Angle between Mean vector of Gravity
+   and Y-axis
+
+angle(Z,gravityMean)
+	
+
+ - Angle between Mean vector of Gravity
+   and Z-axis
+
+**A full list of variables are below:**
+
 1 tBodyAcc-mean()-X
 2 tBodyAcc-mean()-Y
 3 tBodyAcc-mean()-Z
@@ -828,15 +1307,15 @@ A full list of variables are below:
 561 angle(Z,gravityMean)
 
 
-Notes: 
-======
+***Notes:***
+ 
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
 
 For more information about this dataset contact: activityrecognition@smartlab.ws
 
-License:
-========
+***License:***
+
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
